@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Login Form Page</title>
+    <link rel="stylesheet" href="login_style.css">
+	<link rel="stylesheet" href="new2.css">
+	<script src="../js/validation.js"></script>
+ 
+</head>
+<body>
+    <div class="login-page">
+	<div class="form">
+	    <h1 style="color:white;margin:5%;font-family:sans-serif;"><i>Break The Barriers!</i></h1>
+	   <form name="registrationForm" class ="register-form" action="../server/user_registration.php" method="POST">
+	   <input type="text" placeholder=" UserName" name="username"/>
+	   <input type="text" placeholder="Password" placeholder="eg:p123678" name="password"/>
+	   <input type="Email" placeholder="Email ID" name="email"/>
+	   <button type="button" value="Register" name="btnSubmit" onclick="return validate()">CREATE</button>
+	   <p class="message">Already Registered?<a href="#">Login here </a></p>
+	   </form>
+	   
+	   
+	   <form class="login-form" name="loginForm" action="../server/user_entry.php" method="POST">
+	   <input type="text" placeholder="Username" name="name"/> 
+	   <input type="password" name="password" placeholder="eg:p123678"/>
+	   <button type="submit" value="Login" name="submit">Login</button>
+	   <p class ="message">Not Registered?<a href="#">Register here</a></p>
+	   </form>
+	   </div>
+	   </div>
+	   <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+	   <script>
+	   $('.message a').click(function(){
+	   $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+	   });
+	   </script>
+	   
+		 
+</body>
+</html>
+
+
+
+ 
